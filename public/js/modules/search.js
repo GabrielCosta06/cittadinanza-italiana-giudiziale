@@ -20,7 +20,10 @@ export async function performSearch() {
   }
 
   setStatus(translate('status.searching'), 'loading');
-  if (dom.searchButton) dom.searchButton.disabled = true;
+  if (dom.searchButton) {
+    dom.searchButton.disabled = true;
+    dom.searchButton.classList.add('loading');
+  }
   if (dom.searchButtonLabel) dom.searchButtonLabel.textContent = translate('status.searching');
 
   try {
@@ -43,7 +46,10 @@ export async function performSearch() {
     setStatus(error.message, 'error');
     hideResults();
   } finally {
-    if (dom.searchButton) dom.searchButton.disabled = false;
+    if (dom.searchButton) {
+      dom.searchButton.disabled = false;
+      dom.searchButton.classList.remove('loading');
+    }
     if (dom.searchButtonLabel) dom.searchButtonLabel.textContent = translate('ui.buttons.search');
   }
 }

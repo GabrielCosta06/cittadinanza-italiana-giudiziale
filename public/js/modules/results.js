@@ -37,6 +37,7 @@ function normalizeResultEntry(entry) {
 export function hideResults() {
   if (dom.resultsSection) {
     dom.resultsSection.style.display = 'none';
+    dom.resultsSection.classList.remove('visible');
   }
   clearResults();
 }
@@ -97,10 +98,10 @@ export function showResults(results) {
 
   if (dom.resultsSection) {
     dom.resultsSection.style.display = 'block';
-    dom.resultsSection.style.animation = 'slideUp 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) both';
-
+    // Use a timeout to ensure the display property is applied before the transition starts
     setTimeout(() => {
+      dom.resultsSection.classList.add('visible');
       dom.resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 300);
+    }, 50);
   }
 }
