@@ -1,0 +1,106 @@
+﻿/* PST Consulta - Premium Liquid Glass Design System */
+
+:root {
+    /* Liquid Glass Colors */
+    --liquid-primary: rgba(0, 122, 255, 0.85);
+    --liquid-secondary: rgba(88, 86, 214, 0.85);
+    --liquid-success: rgba(52, 199, 89, 0.85);
+    --liquid-warning: rgba(255, 149, 0, 0.85);
+    --liquid-danger: rgba(255, 59, 48, 0.85);
+    --liquid-whatsapp: rgba(37, 211, 102, 0.85);
+    --liquid-premium: rgba(255, 215, 0, 0.85);
+    
+    /* Glass Materials */
+    --glass-ultra-thin: rgba(255, 255, 255, 0.05);
+    --glass-thin: rgba(255, 255, 255, 0.1);
+    --glass-regular: rgba(255, 255, 255, 0.15);
+    --glass-thick: rgba(255, 255, 255, 0.25);
+    --glass-ultra-thick: rgba(255, 255, 255, 0.35);
+    
+    /* Dark Glass Materials */
+    --glass-dark-ultra-thin: rgba(0, 0, 0, 0.05);
+    --glass-dark-thin: rgba(0, 0, 0, 0.1);
+    --glass-dark-regular: rgba(0, 0, 0, 0.15);
+    --glass-dark-thick: rgba(0, 0, 0, 0.25);
+    
+    /* Blur Values */
+    --blur-ultra-light: blur(8px);
+    --blur-light: blur(16px);
+    --blur-medium: blur(24px);
+    --blur-heavy: blur(32px);
+    --blur-ultra-heavy: blur(48px);
+    
+    /* Shadows */
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --shadow-glass-hover: 0 16px 64px rgba(0, 0, 0, 0.15);
+    --shadow-glass-active: 0 4px 16px rgba(0, 0, 0, 0.2);
+    --shadow-premium: 0 12px 48px rgba(255, 215, 0, 0.2);
+    
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', Roboto, sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+    --radius-full: 50%;
+    
+    /* Animations */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.6;
+    color: #1d1d1f;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Liquid Glass Base Component */
+.liquid-glass {
+    background: var(--glass-regular);
+    backdrop-filter: var(--blur-medium);
+    -webkit-backdrop-filter: var(--blur-medium);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-glass);
+    transition: all var(--transition-normal);
+}
+
+.liquid-glass:hover {
+    background: var(--glass-thick);
+    box-shadow: var(--shadow-glass-hover);
+    transform: translateY(-2px);
+}

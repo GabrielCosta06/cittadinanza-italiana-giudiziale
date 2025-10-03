@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PST Consulta - Consulta Profissional de Processos Judiciais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/premium.css" />
+    <link rel="stylesheet" href="css/status.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+    <!-- Liquid Glass Navigation -->
+    <nav class="liquid-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🇮🇹</span>
+                <span>PST Consulta</span>
+            </div>
+            <div class="nav-tabs">
+                <a href="#" class="nav-tab active" data-tab="hero">
+                    <span class="tab-icon">🏠</span>
+                    <span id="navHero">Início</span>
+                </a>
+                <a href="#" class="nav-tab" data-tab="search">
+                    <span class="tab-icon">🔍</span>
+                    <span id="navConsultation">Consulta</span>
+                </a>
+                <a href="#" class="nav-tab" data-tab="subscription">
+                    <span class="tab-icon">⭐</span>
+                    <span>Premium</span>
+                </a>
+                <a href="#" class="nav-tab" data-tab="contact">
+                    <span class="tab-icon">💬</span>
+                    <span id="navContact">Contato</span>
+                </a>
+            </div>
+            <div class="language-selector">
+                <select id="languageSelect" class="liquid-select">
+                    <option value="pt">🇧🇷 Português</option>
+                    <option value="it">🇮🇹 Italiano</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Liquid Glass Background -->
+    <div class="hero-background">
+        <div class="liquid-orb orb-1"></div>
+        <div class="liquid-orb orb-2"></div>
+        <div class="liquid-orb orb-3"></div>
+        <div class="liquid-orb orb-4"></div>
+        <div class="liquid-orb orb-5"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="floating-features">
+            <div class="feature-card card-1">
+                <div class="feature-icon">âš¡</div>
+                <div>
+                    <div class="feature-title">Consulta Instantânea</div>
+                    <div class="feature-desc">Resultados em segundos</div>
+                </div>
+            </div>
+            <div class="feature-card card-2">
+                <div class="feature-icon">🛡️</div>
+                <div>
+                    <div class="feature-title">100% Seguro</div>
+                    <div class="feature-desc">Dados protegidos</div>
+                </div>
+            </div>
+            <div class="feature-card card-3">
+                <div class="feature-icon">🎯</div>
+                <div>
+                    <div class="feature-title">Precisão Garantida</div>
+                    <div class="feature-desc">Informações oficiais</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">⚖️</span>
+                <span>Consulta Profissional de Processos</span>
+            </div>
+            <h1 class="hero-title">
+                Consulte <span class="liquid-text">Processos Judiciais</span><br>
+                Com Tecnologia Premium
+            </h1>
+            <p class="hero-subtitle" id="heroSubtitle">
+                Acesse diretamente os registros oficiais do Portale dei Servizi Telematici. 
+                Plataforma profissional para advogados, escritórios e consultores jurídicos.
+            </p>
+            <div class="hero-actions">
+                <button class="liquid-button primary large pulse" id="heroAction">
+                    <span class="button-icon">🚀</span>
+                    <span id="heroActionLabel">Iniciar Consulta Premium</span>
+                    <div class="button-glow"></div>
+                </button>
+                <button class="liquid-button whatsapp large" id="contactButton">
+                    <span class="button-icon">📞</span>
+                    <span>Falar com Especialista</span>
+                    <div class="button-glow"></div>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">25.847</div>
+                    <div class="stat-label">Consultas Realizadas</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">99.2%</div>
+                    <div class="stat-label">Taxa de Sucesso</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">2.5s</div>
+                    <div class="stat-label">Tempo Médio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="search-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge-icon">🔍</span>
+                    <span>Consulta de Processos</span>
+                </div>
+                <h2 class="section-title">Encontre Seu Processo em Segundos</h2>
+                <p class="section-subtitle">
+                    Acesse diretamente os registros oficiais do Portale dei Servizi Telematici. 
+                    Não perca tempo com informações desatualizadas.
+                </p>
+            </div>
+
+            <div class="search-form-container">
+                <form id="searchForm" class="liquid-form needs-validation" novalidate>
+                    <!-- Location Section -->
+                    <div class="form-section">
+                        <div class="section-title-bar">
+                            <div class="section-icon">📍</div>
+                            <h3>Localização do Processo</h3>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="regionSelect" class="form-label" id="regionLabel">
+                                    <span class="label-icon">🌍</span>
+                                    <span>Região *</span>
+                                </label>
+                                <select id="regionSelect" class="liquid-input" required>
+                                    <option value="">Selecione uma região</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="officeSelect" class="form-label" id="officeLabel">
+                                    <span class="label-icon">🏛️</span>
+                                    <span>Órgão Judiciário *</span>
+                                </label>
+                                <select id="officeSelect" class="liquid-input" required disabled>
+                                    <option value="">Selecione um órgão</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Process Details Section -->
+                    <div class="form-section">
+                        <div class="section-title-bar">
+                            <div class="section-icon">📋</div>
+                            <h3>Detalhes do Processo</h3>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="registerSelect" class="form-label" id="registerLabel">
+                                    <span class="label-icon">📚</span>
+                                    <span>Registro *</span>
+                                </label>
+                                <select id="registerSelect" class="liquid-input" required disabled>
+                                    <option value="">Selecione um registro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="numeroInput" class="form-label" id="numeroLabel">
+                                    <span class="label-icon">🔢</span>
+                                    <span>Número *</span>
+                                </label>
+                                <input id="numeroInput" name="numero" type="text" inputmode="numeric" pattern="\d+" 
+                                       class="liquid-input" placeholder="Ex. 1" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="annoInput" class="form-label" id="annoLabel">
+                                    <span class="label-icon">📅</span>
+                                    <span>Ano *</span>
+                                </label>
+                                <input id="annoInput" name="anno" type="text" inputmode="numeric" pattern="\d{4}" 
+                                       maxlength="4" class="liquid-input" placeholder="Ex. 2024" required />
+                            </div>
+                            <div class="form-group">
+                                <!-- Empty space for alignment -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Status and Actions -->
+                    <div id="status" class="status-slot"></div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" id="searchButton" class="liquid-button primary large">
+                            <span class="button-icon">🔍</span>
+                            <span id="searchButtonLabel">Pesquisar Processo</span>
+                            <div class="button-glow"></div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="resultsSection" class="results-section" style="display: none;">
+        <div class="section-container">
+            <div class="results-container">
+                <div class="results-header">
+                    <div>
+                        <h2 class="section-title" id="resultsHeader">Resultados</h2>
+                        <p class="section-subtitle" id="resultsSubtitle">Lista de processos encontrados.</p>
+                    </div>
+                    <span id="resultsSummary" class="results-badge">0 resultados</span>
+                </div>
+                
+                <div id="resultsEmpty" class="results-empty">
+                    Inicie uma pesquisa para visualizar os resultados.
+                </div>
+                
+                <div class="liquid-table-container" id="resultsTableWrapper" style="display: none;">
+                    <table class="liquid-table" id="resultsTable">
+                        <thead>
+                            <tr>
+                                <th id="colRuolo">Ruolo generale</th>
+                                <th id="colGiudice">Giudice</th>
+                                <th id="colRito">Rito</th>
+                                <th id="colUdienza">Próxima audiência</th>
+                                <th id="colDettagli">Detalhes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Subscription Section -->
+    <section id="subscription" class="cta-section premium-section">
+        <div class="section-container">
+            <div class="cta-content">
+                <div class="section-badge premium-badge">
+                    <span class="badge-icon">⭐</span>
+                    <span>Plano Premium</span>
+                </div>
+                <h2 class="cta-title premium-title">Eleve Sua Prática Jurídica ao Próximo Nível</h2>
+                <p class="cta-subtitle">
+                    Acesso ilimitado, relatórios avançados, notificações automáticas e suporte prioritário. 
+                    A ferramenta que os melhores escritórios usam.
+                </p>
+                
+                <!-- Premium Plans -->
+                <div class="premium-plans">
+                    <div class="plan-card basic-plan">
+                        <div class="plan-header">
+                            <h3>Básico</h3>
+                            <div class="plan-price">
+                                <span class="currency">€</span>
+                                <span class="amount">29</span>
+                                <span class="period">/mês</span>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✅ 100 consultas/mês</li>
+                            <li>✅ Histórico de 30 dias</li>
+                            <li>✅ Suporte por email</li>
+                            <li>❌ Relatórios avançados</li>
+                            <li>❌ Notificações automáticas</li>
+                        </ul>
+                        <button class="liquid-button secondary plan-button">
+                            <span>Escolher Básico</span>
+                        </button>
+                    </div>
+                    
+                    <div class="plan-card premium-plan premium-highlight">
+                        <div class="plan-badge">MAIS POPULAR</div>
+                        <div class="plan-header">
+                            <h3>Premium</h3>
+                            <div class="plan-price">
+                                <span class="currency">€</span>
+                                <span class="amount">79</span>
+                                <span class="period">/mês</span>
+                            </div>
+                            <div class="plan-savings">Economize 40%</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✅ Consultas ilimitadas</li>
+                            <li>✅ Histórico completo</li>
+                            <li>✅ Relatórios avançados</li>
+                            <li>✅ Notificações automáticas</li>
+                            <li>✅ Suporte prioritário 24/7</li>
+                            <li>✅ API personalizada</li>
+                            <li>✅ Dashboard executivo</li>
+                        </ul>
+                        <button class="liquid-button primary large plan-button pulse" id="premiumSubscribeBtn">
+                            <span class="button-icon">⭐</span>
+                            <span>Assinar Premium</span>
+                            <div class="button-glow"></div>
+                        </button>
+                    </div>
+                    
+                    <div class="plan-card enterprise-plan">
+                        <div class="plan-header">
+                            <h3>Enterprise</h3>
+                            <div class="plan-price">
+                                <span class="currency">€</span>
+                                <span class="amount">199</span>
+                                <span class="period">/mês</span>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✅ Tudo do Premium</li>
+                            <li>✅ Multi-usuários</li>
+                            <li>✅ White-label</li>
+                            <li>✅ Integração personalizada</li>
+                            <li>✅ Gerente dedicado</li>
+                        </ul>
+                        <button class="liquid-button secondary plan-button">
+                            <span>Contatar Vendas</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="premium-testimonials">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            "Revolucionou nossa prática. Economizamos 15 horas por semana em pesquisas."
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>Dr. Marco Silva</strong> - Sócio, Silva & Associados
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            "A precisão e velocidade são incomparáveis. Ferramenta indispensável."
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>Dra. Ana Costa</strong> - Diretora Jurídica, TechLaw
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="premium-guarantee">
+                    <div class="guarantee-badge">
+                        <span class="guarantee-icon">🛡️</span>
+                        <div>
+                            <strong>Garantia de 30 dias</strong>
+                            <p>Satisfação garantida ou seu dinheiro de volta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="cta-section">
+        <div class="section-container">
+            <div class="cta-content">
+                <div class="section-badge">
+                    <span class="badge-icon">🎯</span>
+                    <span>Precisa de Ajuda Especializada?</span>
+                </div>
+                <h2 class="cta-title">Não Deixe Seus Processos Nas Mãos do Acaso</h2>
+                <p class="cta-subtitle">
+                    Nossos especialistas respondem em minutos pelo WhatsApp. 
+                    Orientação personalizada para cada etapa da sua consulta.
+                </p>
+                <div class="cta-actions">
+                    <a class="liquid-button whatsapp large" href="https://wa.me/351910000000?text=Olá!%20Gostaria%20de%20consultar%20o%20ruolo%20geral." target="_blank" rel="noopener noreferrer">
+                        <span class="button-icon">📱</span>
+                        <span id="contactButtonLabel">Falar no WhatsApp</span>
+                        <div class="button-glow"></div>
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <div class="feature-icon">âš¡</div>
+                        <div class="feature-text">Resposta Imediata</div>
+                    </div>
+                    <div class="cta-feature">
+                        <div class="feature-icon">👨‍💼</div>
+                        <div class="feature-text">Especialistas Certificados</div>
+                    </div>
+                    <div class="cta-feature">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-text">Consulta Gratuita</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="liquid-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">🇮🇹</span>
+                    <span>PST Consulta</span>
+                </div>
+                <div class="footer-text" id="footerCopy">© 2025 PST Consulta - Consulta Profissional de Processos</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Process Detail Modal -->
+    <div class="liquid-modal" id="processModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Dettaglio fascicolo</h3>
+                <button class="modal-close" id="modalClose">✕</button>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Caricamento dettagli...</p>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="liquid-button secondary" id="modalCloseBtn">Chiudi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Subscription Modal -->
+    <div class="liquid-modal" id="premiumModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container premium-modal">
+            <div class="modal-header premium-header">
+                <h3 class="modal-title">🌟 Desbloqueie o Poder Premium</h3>
+                <button class="modal-close" id="premiumModalClose">✕</button>
+            </div>
+            <div class="modal-content">
+                <div class="premium-modal-content">
+                    <div class="premium-benefits">
+                        <h4>Por que escolher Premium?</h4>
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🚀</div>
+                                <div>
+                                    <strong>Consultas Ilimitadas</strong>
+                                    <p>Sem limites mensais. Consulte quantos processos precisar.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">📊</div>
+                                <div>
+                                    <strong>Relatórios Avançados</strong>
+                                    <p>Análises detalhadas e insights para sua prática jurídica.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🔔</div>
+                                <div>
+                                    <strong>Notificações Automáticas</strong>
+                                    <p>Seja alertado sobre mudanças nos seus processos.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">âš¡</div>
+                                <div>
+                                    <strong>Suporte Prioritário</strong>
+                                    <p>Atendimento especializado 24/7 para usuários Premium.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="premium-pricing">
+                        <div class="price-comparison">
+                            <div class="price-item current">
+                                <h5>Plano Atual</h5>
+                                <div class="price">Gratuito</div>
+                                <ul>
+                                    <li>❌ 5 consultas/mês</li>
+                                    <li>❌ Sem relatórios</li>
+                                    <li>❌ Sem notificações</li>
+                                </ul>
+                            </div>
+                            <div class="price-item premium">
+                                <h5>Premium</h5>
+                                <div class="price">€79<span>/mês</span></div>
+                                <ul>
+                                    <li>✅ Consultas ilimitadas</li>
+                                    <li>✅ Relatórios avançados</li>
+                                    <li>✅ Notificações automáticas</li>
+                                    <li>✅ Suporte prioritário</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="premium-urgency">
+                        <div class="urgency-badge">
+                            <span class="urgency-icon">⏰</span>
+                            <div>
+                                <strong>Oferta Limitada!</strong>
+                                <p>Primeiros 100 usuários ganham 50% de desconto no primeiro mês</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions premium-actions">
+                <button class="liquid-button secondary" id="premiumModalCancel">Talvez depois</button>
+                <button class="liquid-button primary large pulse" id="premiumModalSubscribe">
+                    <span class="button-icon">⭐</span>
+                    <span>Assinar Premium Agora</span>
+                    <div class="button-glow"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Free Trial Limit Modal -->
+    <div class="liquid-modal" id="limitModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container limit-modal">
+            <div class="modal-header limit-header">
+                <h3 class="modal-title">🚫 Limite Atingido</h3>
+                <button class="modal-close" id="limitModalClose">✕</button>
+            </div>
+            <div class="modal-content">
+                <div class="limit-modal-content">
+                    <div class="limit-message">
+                        <div class="limit-icon">📊</div>
+                        <h4>Você atingiu o limite de consultas gratuitas</h4>
+                        <p>Você já realizou <strong>5 consultas</strong> este mês. Para continuar consultando processos, faça upgrade para Premium.</p>
+                    </div>
+                    
+                    <div class="upgrade-benefits">
+                        <h5>Com Premium você terá:</h5>
+                        <ul>
+                            <li>✅ Consultas ilimitadas</li>
+                            <li>✅ Histórico completo de processos</li>
+                            <li>✅ Relatórios detalhados em PDF</li>
+                            <li>✅ Notificações de mudanças</li>
+                            <li>✅ Suporte prioritário</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="upgrade-pricing">
+                        <div class="special-offer">
+                            <span class="offer-badge">OFERTA ESPECIAL</span>
+                            <div class="offer-price">
+                                <span class="old-price">€79</span>
+                                <span class="new-price">€39</span>
+                                <span class="offer-period">primeiro mês</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions limit-actions">
+                <button class="liquid-button secondary" id="limitModalCancel">Continuar Grátis</button>
+                <button class="liquid-button primary large pulse" id="limitModalUpgrade">
+                    <span class="button-icon">🚀</span>
+                    <span>Fazer Upgrade Agora</span>
+                    <div class="button-glow"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row Template for Results -->
+    <template id="rowTemplate">
+        <tr>
+            <td class="rg"></td>
+            <td class="giudice"></td>
+            <td class="rito"></td>
+            <td class="udienza"></td>
+            <td>
+                <button type="button" class="liquid-button secondary detail-btn">
+                    <span class="button-icon">👁️</span>
+                    <span class="detail-btn-label">Detalhes</span>
+                </button>
+            </td>
+        </tr>
+    </template>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
+
+
+

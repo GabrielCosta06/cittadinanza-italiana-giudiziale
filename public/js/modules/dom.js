@@ -1,0 +1,27 @@
+﻿// Centralized DOM references
+
+export const dom = {
+  regionSelect: document.getElementById('regionSelect'),
+  officeSelect: document.getElementById('officeSelect'),
+  registerSelect: document.getElementById('registerSelect'),
+  numeroInput: document.getElementById('numeroInput'),
+  annoInput: document.getElementById('annoInput'),
+  searchForm: document.getElementById('searchForm'),
+  searchButton: document.getElementById('searchButton'),
+  searchButtonLabel: document.getElementById('searchButtonLabel'),
+  statusBox: document.getElementById('status'),
+  resultsSection: document.getElementById('resultsSection'),
+  resultsSummary: document.getElementById('resultsSummary'),
+  resultsTableWrapper: document.getElementById('resultsTableWrapper'),
+  resultsEmpty: document.getElementById('resultsEmpty'),
+  resultsTableBody: document.getElementById('resultsBody'),
+  rowTemplate: document.getElementById('rowTemplate'),
+  processModal: document.getElementById('processModal'),
+  modalTitle: document.getElementById('modalTitle'),
+  modalContent: document.getElementById('modalContent'),
+  modalClose: document.getElementById('modalClose'),
+  modalCloseBtn: document.getElementById('modalCloseBtn'),
+  languageSelect: document.getElementById('languageSelect'),
+  heroAction: document.getElementById('heroAction'),
+  modalBackdrop: document.querySelector('#processModal .modal-backdrop'),
+};

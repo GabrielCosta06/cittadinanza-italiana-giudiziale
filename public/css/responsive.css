@@ -1,0 +1,125 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .nav-tabs {
+        display: none;
+    }
+    
+    .hero-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+        min-height: 90vh;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .stat-divider {
+        width: 40px;
+        height: 1px;
+    }
+    
+    .floating-features {
+        display: none;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .liquid-form {
+        padding: var(--spacing-lg);
+    }
+    
+    .section-container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .cta-features {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .modal-container {
+        margin: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .liquid-button.large {
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .cta-title {
+        font-size: 1.75rem;
+    }
+}
+
+
+/* Mobile Responsiveness for Premium Features */
+@media (max-width: 768px) {
+    .premium-plans {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .premium-plan {
+        transform: none;
+    }
+    
+    .premium-plan:hover {
+        transform: translateY(-5px);
+    }
+    
+    .premium-testimonials {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .price-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .guarantee-badge {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .premium-actions,
+    .limit-actions {
+        flex-direction: column;
+    }
+    
+    .premium-actions button,
+    .limit-actions button {
+        width: 100%;
+    }
+}
