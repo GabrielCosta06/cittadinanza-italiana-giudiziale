@@ -42,7 +42,7 @@ app.get('/api/offices', asyncRoute(async (req, res) => {
   const region = (req.query.region || '').trim();
   const lang = (req.query.lang || DEFAULT_LANGUAGE).trim();
   if (!region) {
-    throw httpError(400, "Il parametro 'region' è obbligatorio");
+    throw httpError(400, "Il parametro 'region' ï¿½ obbligatorio");
   }
 
   const offices = await withPstSession(session => fetchOffices(session, region, lang));
@@ -53,7 +53,7 @@ app.get('/api/registers', asyncRoute(async (req, res) => {
   const office = (req.query.office || '').trim();
   const lang = (req.query.lang || DEFAULT_LANGUAGE).trim();
   if (!office) {
-    throw httpError(400, "Il parametro 'office' è obbligatorio");
+    throw httpError(400, "Il parametro 'office' ï¿½ obbligatorio");
   }
 
   const registers = await withPstSession(session => fetchRegisters(session, office, lang));
@@ -64,7 +64,7 @@ app.get('/api/ruoli', asyncRoute(async (req, res) => {
   const register = (req.query.register || '').trim();
   const lang = (req.query.lang || DEFAULT_LANGUAGE).trim();
   if (!register) {
-    throw httpError(400, "Il parametro 'register' è obbligatorio");
+    throw httpError(400, "Il parametro 'register' ï¿½ obbligatorio");
   }
 
   const ruoli = await withPstSession(session => fetchRuoli(session, register, lang));
@@ -120,7 +120,7 @@ app.post('/api/search/ruolo-generale/detail', asyncRoute(async (req, res) => {
   }
 
   if (!detailParams || typeof detailParams !== 'object' || Array.isArray(detailParams)) {
-    throw httpError(400, "Il parametro 'detailParams' è obbligatorio");
+    throw httpError(400, "Il parametro 'detailParams' ï¿½ obbligatorio");
   }
 
   const sanitizedDetailParams = Object.fromEntries(
